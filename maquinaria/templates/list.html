@@ -1,0 +1,57 @@
+
+{% load static %}
+<script src="https://kit.fontawesome.com/d085b5e769.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'css.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% block js %}
+{#    <script src="{% static 'cliente/js/list.js' %}"></script>#}
+{% endblock %}
+
+<div class="contenido">
+        <div class="">
+            <a class="añadir" href="{{ crear_url }}"></a>
+
+            <section>
+                <form autocomplete="off" action="{% url 'maquinaria' %}" method="GET">
+                    <div class="input">
+                        <i class="fa-solid fa-magnifying-glass">
+                            <input type="text" name="query" value="{{ query }}" placeholder="Buscar...por Descripcion">
+
+                        </i>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="contenido-tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Descripcion</th>
+                        <th>Cantidad</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tr>
+                    {% for object in maquinarias %}
+                        <tr class="align-middle" >
+                            <td>{{ object.id }}</td>
+                            <td>{{ object.Descripcion }}</td>
+                            <td>{{ object.Cantidad }}</td>
+                             <td class="acciones">
+                                <a class="iconos-a" href="{% url 'actualizarmaquinaria' object.id %}">✏️</a>
+                                <a class="iconos-a" href="{% url 'deletemaquinaria' object.id %}">❌</a>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                </tr>
+
+                </tr>
+            </table>
+        </div>
+        <a class="actualizar" href="{% url 'maquinaria' %}"></a>
+
+
+    </div>

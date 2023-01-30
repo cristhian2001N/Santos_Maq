@@ -1,0 +1,277 @@
+/*Centrar el body*/
+body {
+    display: grid;
+    place-items: center;
+}
+
+/*Contenido*/
+.contenido {
+    position: absolute;
+    height: 600px;
+    width: 800px;
+    background-color: #2D4263;
+    top: 10%;
+    overflow: hidden;
+    box-shadow: 16px 14px 20px #222831;
+    border-radius: 20px;
+    border: 3px solid;
+    animation: cambio-color 4s infinite;
+}
+/*Tamaño del texto de la etiqueta A*/
+h1 {
+    font-size: 15px;
+    z-index: 10;
+    font-family: Rocher;
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+/*Button Añadir*/
+.añadir {
+    margin: 50px 75px;
+    width: 110px;
+    height: 60px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #101010;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+}
+
+.añadir:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    background: linear-gradient(120deg, green, blue, deeppink, red,
+            yellow);
+}
+
+.añadir::before {
+    content: "";
+    background-image: conic-gradient(#ff0052 20deg,
+            transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+
+.añadir::after {
+    content: "Añadir";
+    width: 100px;
+    height: 50px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0052;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/*Boton de actualizar*/
+.actualizar {
+    margin: 50px 400px;
+    width: 150px;
+    height: 60px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #101010;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+}
+
+.actualizar:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    background: linear-gradient(120deg, green, blue, deeppink, red,
+            yellow);
+}
+
+.actualizar::before {
+    content: "";
+    background-image: conic-gradient(#ff0052 20deg,
+            transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+
+.actualizar::after {
+    content: "Actualizar";
+    width: 140px;
+    height: 50px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0052;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+.contenido-tabla {
+    width: 400px;
+    margin: 70px 200px;
+    display: grid;
+    place-items: center;
+}
+
+table {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px;
+}
+
+tr,
+th,
+td {
+
+    padding: 10px 10px;
+}
+
+tr,
+th,
+td {
+
+    border: 3px solid purple;
+    animation: cambio-color 4s infinite;
+}
+
+@keyframes cambio-color {
+    0% {
+        border-color: purple;
+    }
+
+    25% {
+        border-color: blue;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    75% {
+        border-color: yellow;
+    }
+
+    100% {
+        border-color: purple;
+    }
+}
+
+
+
+
+
+.contenido-añadir {
+    width: 400px;
+    margin: 100px 20px;
+}
+
+
+
+/* Imput */
+.input-formulario[type="text"],
+.input-formulario[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border: 1px solid purple;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-formulario {
+    margin: 1110px 70px;
+    border: 3px solid purple;
+    animation: cambio-color 4s infinite;
+    display: grid;
+    place-items: center;
+}
+
+section {
+    display: grid;
+    place-items: left;
+}
+form {
+    margin: auto;
+}
+
+form div {
+    border: 3px solid purple;
+    animation: cambio-color 4s infinite;
+    display: flex;
+    background: #fff;
+    padding: 9px 22px 9px 26px;
+    border-radius: 20px;
+    border: 2px solid #cad3dc;
+    box-shadow: rgba(255, 255, 255, 0.5) -8px -8px 15px,
+        rgba(0, 0, 0, 0.1) 10px 10px 10px,
+        rgba(255, 255, 255, 0.5) -8px -8px 15px inset,
+        rgba(0, 0, 0, 0.1) 10px 10px 10px inset;
+}
+
+form input {
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    padding-left: 24px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 0px;
+    transition: all 1s;
+}
+
+form input:focus {
+    outline: none;
+    width: 300px;
+}
